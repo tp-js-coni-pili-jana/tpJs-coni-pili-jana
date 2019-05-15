@@ -1,0 +1,45 @@
+body {
+  background-color: #edf0f1;
+  margin: 0;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.664);
+}
+
+#header {
+  background-color: #BC3B69;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#header form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#header form input {
+  font-size: 15px;
+  width: 95%;
+  background-color: #cd6185;
+  text-decoration: none;
+  border: 0px;
+  margin: 15px 0 15px 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+#header form #task_btn {
+  position: absolute;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  font-size: 15px;
+  color: #BC3B69;
+  margin: 15px 0 15px 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */
