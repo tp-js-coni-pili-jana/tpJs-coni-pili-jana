@@ -9,20 +9,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-do list</title>
 </head>
-<body>
+<body onload="printTask()">
     <header id="header">
         <form>
-            <input type="text" placeholder="Ingrese una tarea...">
-            <button id="task_btn" class="fas fa-plus"></button>
+            <input type="text" placeholder="Ingrese una tarea..." value="" id="commentInput"
+            onkeypress="enterKeyPress(event)">
+            <button id="task_btn" class="fas fa-plus" onclick="sendTask()"></button>
         </form>
     </header>  
-    <div id="taskList">
-        <ul id="uncompleted">
-            
+    <div>
+        <ul id="taskList">
+            <li></li>
         </ul>
-        <ul id="completed">
-
+        <ul id="doneTaskList">
+            <li></li>
         </ul>
-    </div>
+    </div> 
 </body>
 </html>
