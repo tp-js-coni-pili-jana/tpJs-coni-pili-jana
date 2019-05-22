@@ -2,34 +2,31 @@
 
 var task
 var newTask
-var taskList
+var pendingList
 
 
-allTask = [
-  // momentaneo 
-  {text:'uno', isInitial:true},
-  {text:'dos', isInitial:true}
-]
+allTask = []
 
 
 
 var printTask = function(){
-  taskList = document.getElementById("taskList")
-  taskList.innerHTML = ""
-  doneTaskList = document.getElementById('doneTaskList')
-  doneTaskList.innerHTML = ''
+  event.preventDefault()
+  pendingList = document.getElementById("pendingList")
+  pendingList.innerHTML = ""
+  doneList = document.getElementById("doneList")
+  doneList.innerHTML = ""
   allTask.map(function(assignment, index){
     // crear variable aparte luego
       var taskItem = document.createElement("li")
       taskItem.classList.add("assignment")
       taskItem.innerText = assignment.text
-      taskItem.appendChild(createBtn('toggle', index, toggleItem))
-      taskItem.appendChild(createBtn('delete', index, deleteItem))
+      taskItem.appendChild(createBtn('toggle', index, 'check', toggleItem))
+      taskItem.appendChild(createBtn('delete', index, 'bin' ,deleteItem))
       // 
       if(assignment.pending){
-          taskList.appendChild(taskItem)
+        pendingList.appendChild(taskItem)
         } else {
-          doneTaskList.appendChild(taskItem)
+          doneList.appendChild(taskItem)
         }
   })
 }
@@ -61,10 +58,12 @@ var sendTask = function(){
 
 // designacion de responsabilidades
 
-var createBtn = function(text, itemId, btnFuction){
-  var btn = document.createElement('button')
+var createBtn = function(text, itemId,nameClass, btnFuction){
+  var btn = document.createElement('a')
   btn.innerText = text
   btn.id = itemId
+  btn.classList.add(nameClass)
+  btn.href = "#"
   btn.onclick = function(){ btnFuction(this) }
   return btn
 }
