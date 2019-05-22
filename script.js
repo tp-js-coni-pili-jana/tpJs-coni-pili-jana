@@ -4,14 +4,11 @@ var task
 var newTask
 var taskList
 
-
 allTask = [
   // momentaneo 
   {text:'uno', isInitial:true},
   {text:'dos', isInitial:true}
 ]
-
-
 
 var printTask = function(){
   taskList = document.getElementById("taskList")
@@ -33,7 +30,6 @@ var printTask = function(){
         }
   })
 }
-
 
 var sendTask = function(){
   task = document.getElementById('commentInput');
