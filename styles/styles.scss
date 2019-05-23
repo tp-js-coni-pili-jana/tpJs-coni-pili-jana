@@ -11,7 +11,7 @@ body {
     background-color: #BC3B69;
     border-radius: 0 0 10px 10px;
     padding: 15px;
-    form {
+    
         input {
             font-size: 15px;
             width: 100%;
@@ -35,7 +35,6 @@ body {
             border-radius: 25px;
             cursor: pointer;
         }
-    }
 }
 
 
@@ -45,3 +44,24 @@ body {
     
         
     }
+
+    #pendingList, #doneList { 
+        padding: 0;
+        margin: 2% 2% 0 2%;
+
+        .assignment {
+        list-style: none;
+        background-color: white;
+        padding: 18px 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+            .bin {
+                float: right;
+                text-decoration: none;
+            }
+            .check {
+                float: right;
+                text-decoration: none;
+            }
+        }
+}
