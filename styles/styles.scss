@@ -38,7 +38,22 @@ body {
     }
 }
 
-#index{
-  padding: 10px;
-  box-sizing: border-box;
+#pendingList, #doneList { 
+    padding: 0;
+    margin: 2% 2% 0 2%;
+    .assignment {
+    list-style: none;
+    background-color: white;
+    padding: 18px 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+        .bin {
+            float: right;
+            text-decoration: none;
+        }
+        .check {
+            float: right;
+            text-decoration: none;
+        }
+    }
 }

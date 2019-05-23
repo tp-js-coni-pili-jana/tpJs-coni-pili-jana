@@ -38,4 +38,24 @@ body {
   cursor: pointer;
 }
 
+#pendingList, #doneList {
+  padding: 0;
+  margin: 2% 2% 0 2%;
+}
+#pendingList .assignment, #doneList .assignment {
+  list-style: none;
+  background-color: white;
+  padding: 18px 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+#pendingList .assignment .bin, #doneList .assignment .bin {
+  float: right;
+  text-decoration: none;
+}
+#pendingList .assignment .check, #doneList .assignment .check {
+  float: right;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
