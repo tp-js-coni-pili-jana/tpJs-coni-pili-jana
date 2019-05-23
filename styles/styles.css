@@ -49,13 +49,28 @@ body {
   border-radius: 5px;
   margin: 10px 0;
 }
-#pendingList .assignment .bin, #doneList .assignment .bin {
+#pendingList .assignment a, #doneList .assignment a {
   float: right;
   text-decoration: none;
+  position: relative;
+  padding: 5px 5px;
 }
-#pendingList .assignment .check, #doneList .assignment .check {
-  float: right;
-  text-decoration: none;
+#pendingList .assignment a .fa-check, #doneList .assignment a .fa-check {
+  color: #BC3B69;
+  border: 1.5px solid #BC3B69;
+  border-radius: 50%;
+  padding: 5px;
+}
+#pendingList .assignment a .fa-check:hover, #doneList .assignment a .fa-check:hover {
+  background-color: #BC3B69;
+  color: white;
+}
+#pendingList .assignment a .fa-trash-alt, #doneList .assignment a .fa-trash-alt {
+  color: #C7CCD0;
+  font-size: 27px;
+}
+#pendingList .assignment a .fa-trash-alt:hover, #doneList .assignment a .fa-trash-alt:hover {
+  color: #F74320;
 }
 
 /*# sourceMappingURL=styles.css.map */

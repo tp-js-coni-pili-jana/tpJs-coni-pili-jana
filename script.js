@@ -17,8 +17,8 @@ var printTask = function(){
       var taskItem = document.createElement("li")
       taskItem.classList.add("assignment")
       taskItem.innerText = assignment.text
-      taskItem.appendChild(createBtn('<i class="far fa-check-square"></i>', index, "check", toggleItem))
-      taskItem.appendChild(createBtn('<i class="far fa-trash-alt"></i>', index, 'bin' ,deleteItem))
+      taskItem.appendChild(createBtn('<i class="fas fa-check"></i>', index ,toggleItem))
+      taskItem.appendChild(createBtn('<i class="far fa-trash-alt"></i>', index ,deleteItem))
       if(assignment.pending){
         pendingList.appendChild(taskItem)
         } else {
@@ -45,11 +45,13 @@ var sendTask = function(){
 
 // designacion de responsabilidades
 
-var createBtn = function(text, itemId,nameClass, btnFuction){
+
+
+var createBtn = function(text, itemId, btnFuction){
   var btn = document.createElement('a')
   btn.innerHTML = text
   btn.id = itemId
-  btn.classList.add(nameClass)
+ // btn.classList.add(nameClass)
   btn.href = "#"
   btn.onclick = function(){ btnFuction(this) }
   return btn
