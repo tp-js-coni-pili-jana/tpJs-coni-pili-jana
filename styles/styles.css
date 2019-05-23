@@ -38,6 +38,15 @@ body {
   cursor: pointer;
 }
 
+.dash {
+  border: 1px solid darkgray;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #pendingList, #doneList {
   padding: 0;
   margin: 2% 2% 0 2%;
