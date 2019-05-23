@@ -11,17 +11,18 @@
 </head>
 <body onload="printTask()">
     <header id="header">
-        <form>
             <input type="text" placeholder="Ingrese una tarea..." value="" id="commentInput"
-            >
-            <button id="task_btn" class="fas fa-plus" onclick="sendTask()"></button>
-        </form>
+            onkeypress="enterKeyPress(event)">
+            <button id="task_btn" type="button"class="fas fa-plus" onclick="sendTask()">
+            </button>
     </header>  
     <div>
         <ul id="pendingList">
+            
         </ul>
-        <div class="dash"></div>
+        <span class="dash">S </span>
         <ul id="doneList">
+           
         </ul>
     </div> 
 </body>

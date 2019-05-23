@@ -5,8 +5,6 @@ var pendingList
 
 allTask = []
 
-
-
 var printTask = function(){
   event.preventDefault()
   pendingList = document.getElementById("pendingList")
@@ -26,7 +24,6 @@ var printTask = function(){
         }
   })
 }
-
 
 var sendTask = function(){
   task = document.getElementById('commentInput');

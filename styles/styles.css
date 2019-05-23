@@ -14,7 +14,7 @@ body {
   border-radius: 0 0 10px 10px;
   padding: 15px;
 }
-#header form input {
+#header input {
   font-size: 15px;
   width: 100%;
   background-color: #cd6185;
@@ -25,7 +25,7 @@ body {
   height: 50px;
   box-sizing: content-box;
 }
-#header form #task_btn {
+#header #task_btn {
   position: absolute;
   border: none;
   right: 12px;
@@ -49,7 +49,7 @@ body {
 
 #pendingList, #doneList {
   padding: 0;
-  margin: 2% 2% 0 2%;
+  margin: 0 15px 0 15px;
 }
 #pendingList .assignment, #doneList .assignment {
   list-style: none;
@@ -61,14 +61,14 @@ body {
 #pendingList .assignment a, #doneList .assignment a {
   float: right;
   text-decoration: none;
-  position: relative;
-  padding: 5px 5px;
+  margin: 0 5px;
 }
 #pendingList .assignment a .fa-check, #doneList .assignment a .fa-check {
   color: #BC3B69;
   border: 1.5px solid #BC3B69;
-  border-radius: 50%;
-  padding: 5px;
+  border-radius: 15px;
+  padding: 2px;
+  font-size: 15px;
 }
 #pendingList .assignment a .fa-check:hover, #doneList .assignment a .fa-check:hover {
   background-color: #BC3B69;
@@ -76,7 +76,7 @@ body {
 }
 #pendingList .assignment a .fa-trash-alt, #doneList .assignment a .fa-trash-alt {
   color: #C7CCD0;
-  font-size: 27px;
+  font-size: 20px;
 }
 #pendingList .assignment a .fa-trash-alt:hover, #doneList .assignment a .fa-trash-alt:hover {
   color: #F74320;
