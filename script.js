@@ -40,7 +40,14 @@ var sendTask = function(){
 }
 
 
+
 // designacion de responsabilidades
+
+var informationText = document.getElementsByTagName('p')
+
+//if(pendingList !== ""){
+ // informationText.classList.add('displayNone')
+//}
 
 
 
@@ -48,7 +55,6 @@ var createBtn = function(text, itemId, btnFuction){
   var btn = document.createElement('a')
   btn.innerHTML = text
   btn.id = itemId
- // btn.classList.add(nameClass)
   btn.href = "#"
   btn.onclick = function(){ btnFuction(this) }
   return btn

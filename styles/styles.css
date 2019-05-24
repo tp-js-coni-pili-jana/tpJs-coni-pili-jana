@@ -1,6 +1,13 @@
 body {
   background-color: #edf0f1;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+body .dash {
+  border: 0.5px solid #C7CCD0;
+  width: 12%;
+  margin: 20px auto;
 }
 
 ::placeholder {
@@ -16,19 +23,23 @@ body {
 }
 #header input {
   font-size: 15px;
-  width: 100%;
+  width: 99%;
   background-color: #cd6185;
   text-decoration: none;
   border: none;
   color: white;
   border-radius: 5px 25px 25px 5px;
-  height: 50px;
+  height: 49px;
   box-sizing: content-box;
+  padding-left: 10px;
+}
+#header input:focus {
+  outline-width: 0;
 }
 #header #task_btn {
   position: absolute;
   border: none;
-  right: 12px;
+  right: 15px;
   top: 15px;
   width: 50px;
   height: 50px;
@@ -37,17 +48,14 @@ body {
   border-radius: 25px;
   cursor: pointer;
 }
-
-.dash {
-  border: 1px solid #C7CCD0;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+#header #task_btn:hover {
+  background-color: white;
+  color: grey;
+  transition: 0.4s;
 }
 
 #pendingList, #doneList {
+  color: #444444;
   padding: 0;
   margin: 0 15px 0 15px;
 }
@@ -61,25 +69,41 @@ body {
 #pendingList .assignment a, #doneList .assignment a {
   float: right;
   text-decoration: none;
-  margin: 0 5px;
 }
 #pendingList .assignment a .fa-check, #doneList .assignment a .fa-check {
-  color: #BC3B69;
   border: 1.5px solid #BC3B69;
   border-radius: 15px;
-  padding: 2px;
-  font-size: 15px;
-}
-#pendingList .assignment a .fa-check:hover, #doneList .assignment a .fa-check:hover {
-  background-color: #BC3B69;
-  color: white;
+  padding: 4px;
+  font-size: 10px;
+  margin-left: 10px;
 }
 #pendingList .assignment a .fa-trash-alt, #doneList .assignment a .fa-trash-alt {
   color: #C7CCD0;
   font-size: 20px;
+  border-right: 1px solid #C7CCD0;
+  padding-right: 10px;
+  transition: 0.3s;
 }
 #pendingList .assignment a .fa-trash-alt:hover, #doneList .assignment a .fa-trash-alt:hover {
   color: #F74320;
+}
+
+#doneList .fa-check {
+  color: white;
+  background-color: #BC3B69;
+}
+
+#pendingList .fa-check {
+  color: #BC3B69;
+  transition: 0.3s;
+}
+#pendingList .fa-check:hover {
+  background-color: #BC3B69;
+  color: white;
+}
+
+.displayNone {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

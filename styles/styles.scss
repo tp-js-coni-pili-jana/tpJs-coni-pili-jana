@@ -1,12 +1,18 @@
 @import 'components/variables';
-
 body {
     background-color: #edf0f1;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    .dash{
+       border: 0.5px solid $grey;
+       width: 12%;
+       margin: 20px auto;
+      } 
 }
-
-::placeholder {color: rgba(255, 255, 255, 0.664);}
-
+::placeholder {
+    color: rgba(255, 255, 255, 0.664);
+}
 #header {
     overflow: hidden;
     position: relative;
@@ -14,21 +20,25 @@ body {
     border-radius: 0 0 10px 10px;
     padding: 15px;
     
-        input {
-            font-size: 15px;
-            width: 100%;
-            background-color: #cd6185;
-            text-decoration: none;
-            border: none;
-            color: white;
-            border-radius: 5px 25px 25px 5px;
-            height: 50px;
-            box-sizing: content-box;
+    input {
+        &:focus {
+            outline-width: 0;
         }
+        font-size: 15px;
+        width: 99%;
+        background-color: #cd6185;
+        text-decoration: none;
+        border: none;
+        color: white;
+        border-radius: 5px 25px 25px 5px;
+        height: 49px;
+        box-sizing: content-box;
+        padding-left: 10px;
+    }
         #task_btn{
             position: absolute;
             border: none;
-            right: 12px;
+            right: 15px;
             top: 15px;
             width: 50px;
             height: 50px;
@@ -36,55 +46,63 @@ body {
             color: $pink;
             border-radius: 25px;
             cursor: pointer;
-        }
+            &:hover {
+                background-color: white;
+                color:grey;
+                transition: 0.4s;
+            }
+    }
 }
-
-
-.dash{
-    border: 1px solid $grey;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
 #pendingList, #doneList { 
+    color: #444444;
     padding: 0;
     margin: 0 15px 0 15px;
      .assignment {
-    list-style: none;
-    background-color: white;
-    padding: 18px 10px;
-    border-radius: 5px;
-    margin: 10px 0;
-                 a{
-                   float:right;
-                   text-decoration: none;
-                   margin: 0 5px;
-                   
-                    .fa-check{
-                                color: $pink;
-                                border: 1.5px solid $pink;
-                                border-radius:15px;
-                                padding: 2px;
-                                font-size: 15px;
-
-                                 &:hover {
-                                    background-color: $pink;
-                                    color:white ;     
-                                }
-                             }
-                    .fa-trash-alt{
-                                color: $grey;
-                                font-size: 20px;
-
-                                &:hover {
-                                    color: #F74320;   
-                                        }
-                                }
-                     }
-        
-        
-    }
+        list-style: none;
+        background-color: white;
+        padding: 18px 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        a {
+            float:right;
+            text-decoration: none;
+            .fa-check{
+                border: 1.5px solid $pink;
+                border-radius:15px;
+                padding: 4px;
+                font-size: 10px;
+                margin-left: 10px; 
+                 }
+            .fa-trash-alt{
+                color: $grey;
+                font-size: 20px;
+                border-right: 1px solid $grey;
+                padding-right: 10px; 
+                transition: 0.3s;
+                &:hover {
+                color: #F74320;   
+                    }
+                }
+            }
+         }
   }
+#doneList{
+    .fa-check{
+        color: white;
+        background-color: $pink ;
+        }
+    }
+#pendingList{
+    .fa-check{
+        color: $pink;
+        transition: 0.3s;
+        &:hover {
+            background-color: $pink;
+            color:white ;     
+                }
+    }
+}
+
+.displayNone{
+display: none;
+}
