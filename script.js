@@ -11,7 +11,8 @@ var printTask = function(){
   pendingList.innerHTML = ""
   doneList = document.getElementById("doneList")
   doneList.innerHTML = ""
-  var informationText = document.getElementsByTagName('p')
+  pendingTaskBox = document.getElementById('pendingText')
+  doneTaskBox = document.getElementById('doneText')
   allTask.map(function(assignment, index){
       var taskItem = document.createElement("li")
       taskItem.classList.add("assignment")
@@ -24,12 +25,16 @@ var printTask = function(){
           doneList.appendChild(taskItem)
         }
   })
- // console.log(pendingList.children.length)
  if (pendingList.children.length > 0){
-   informationText.classList.add('displayNone')
- }
+   pendingTaskBox.classList.add('displayNone')
+ }else{pendingTaskBox.classList.remove('displayNone')
 }
 
+if (doneList.children.length > 0){
+  doneTaskBox.classList.add('displayNone')
+}else{doneTaskBox.classList.remove('displayNone')
+}
+}
 
 
 var sendTask = function(){
@@ -47,15 +52,6 @@ var sendTask = function(){
 }
 
 
-
-// designacion de responsabilidades
-
-
-
-
-
-
-
 var createBtn = function(text, itemId, btnFuction){
   var btn = document.createElement('a')
   btn.innerHTML = text
@@ -64,8 +60,6 @@ var createBtn = function(text, itemId, btnFuction){
   btn.onclick = function(){ btnFuction(this) }
   return btn
 }
-
-
 
 var toggleItem = function(btn){
   allTask[btn.id].pending = !allTask[btn.id].pending
