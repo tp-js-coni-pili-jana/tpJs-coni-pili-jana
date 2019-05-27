@@ -11,6 +11,7 @@ var printTask = function(){
   pendingList.innerHTML = ""
   doneList = document.getElementById("doneList")
   doneList.innerHTML = ""
+  var informationText = document.getElementsByTagName('p')
   allTask.map(function(assignment, index){
       var taskItem = document.createElement("li")
       taskItem.classList.add("assignment")
@@ -23,6 +24,10 @@ var printTask = function(){
           doneList.appendChild(taskItem)
         }
   })
+ // console.log(pendingList.children.length)
+ if (pendingList.children.length !==0 ){
+   informationText.classList.add('displayNone')
+ }
 }
 
 var sendTask = function(){
@@ -43,11 +48,9 @@ var sendTask = function(){
 
 // designacion de responsabilidades
 
-var informationText = document.getElementsByTagName('p')
 
-//if(pendingList !== ""){
- // informationText.classList.add('displayNone')
-//}
+
+
 
 
 
