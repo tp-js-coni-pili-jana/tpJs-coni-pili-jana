@@ -25,10 +25,12 @@ var printTask = function(){
         }
   })
  // console.log(pendingList.children.length)
- if (pendingList.children.length !==0 ){
+ if (pendingList.children.length > 0){
    informationText.classList.add('displayNone')
  }
 }
+
+
 
 var sendTask = function(){
   task = document.getElementById('commentInput');

@@ -5,7 +5,7 @@ body {
   font-size: 15px;
 }
 body .dash {
-  border: 0.5px solid #C7CCD0;
+  border: 0.5px solid #aaa;
   width: 12%;
   margin: 20px auto;
 }
@@ -54,6 +54,15 @@ body .dash {
   transition: 0.4s;
 }
 
+div p {
+  margin: 30px auto;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
 #pendingList, #doneList {
   color: #444444;
   padding: 0;
@@ -78,9 +87,9 @@ body .dash {
   margin-left: 10px;
 }
 #pendingList .assignment a .fa-trash-alt, #doneList .assignment a .fa-trash-alt {
-  color: #C7CCD0;
+  color: #aaa;
   font-size: 20px;
-  border-right: 1px solid #C7CCD0;
+  border-right: 1px solid #aaa;
   padding-right: 10px;
   transition: 0.3s;
 }

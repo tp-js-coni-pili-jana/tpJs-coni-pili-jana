@@ -53,6 +53,17 @@ body {
             }
     }
 }
+
+div{
+    p{
+        margin: 30px auto;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        color: $grey ;
+    }
+}
 #pendingList, #doneList { 
     color: #444444;
     padding: 0;
@@ -86,6 +97,7 @@ body {
             }
          }
   }
+
 #doneList{
     .fa-check{
         color: white;
