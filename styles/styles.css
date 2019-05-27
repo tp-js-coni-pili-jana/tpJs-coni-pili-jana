@@ -5,26 +5,26 @@ body {
   font-size: 15px;
 }
 body .dash {
-  border: 0.5px solid #aaa;
+  border: 0.5px solid #639FA6;
   width: 12%;
   margin: 20px auto;
 }
 
 ::placeholder {
-  color: rgba(255, 255, 255, 0.664);
+  color: rgba(213, 242, 242, 0.459);
 }
 
 #header {
   overflow: hidden;
   position: relative;
-  background-color: #BC3B69;
+  background-color: #023E73;
   border-radius: 0 0 10px 10px;
   padding: 15px;
 }
 #header input {
   font-size: 15px;
   width: 99%;
-  background-color: #cd6185;
+  background-color: #0367A6;
   text-decoration: none;
   border: none;
   color: white;
@@ -43,8 +43,8 @@ body .dash {
   top: 15px;
   width: 50px;
   height: 50px;
-  font-size: 15px;
-  color: #BC3B69;
+  font-size: 18px;
+  color: #023E73;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -52,6 +52,7 @@ body .dash {
   background-color: white;
   color: grey;
   transition: 0.4s;
+  transform: rotate(180deg);
 }
 
 div p {
@@ -60,11 +61,11 @@ div p {
   display: block;
   text-align: center;
   font-size: 12px;
-  color: #aaa;
+  color: #639FA6;
 }
 
 #pendingList, #doneList {
-  color: #444444;
+  color: #023E73;
   padding: 0;
   margin: 0 15px 0 15px;
 }
@@ -74,17 +75,27 @@ div p {
   padding: 18px 10px;
   border-radius: 5px;
   margin: 10px 0;
+  transition: 0.3s;
+}
+#pendingList .assignment:hover, #doneList .assignment:hover {
+  padding: 22px 14px;
 }
 #pendingList .assignment a, #doneList .assignment a {
   float: right;
   text-decoration: none;
 }
 #pendingList .assignment a .fa-check, #doneList .assignment a .fa-check {
-  border: 1.5px solid #BC3B69;
+  border: 1.5px solid green;
   border-radius: 15px;
   padding: 4px;
   font-size: 10px;
   margin-left: 10px;
+  transition: 0.3s;
+}
+#pendingList .assignment a .fa-check:hover, #doneList .assignment a .fa-check:hover {
+  border-radius: 17px;
+  padding: 6px;
+  font-size: 10px;
 }
 #pendingList .assignment a .fa-trash-alt, #doneList .assignment a .fa-trash-alt {
   color: #aaa;
@@ -95,20 +106,20 @@ div p {
 }
 #pendingList .assignment a .fa-trash-alt:hover, #doneList .assignment a .fa-trash-alt:hover {
   color: #F74320;
+  font-size: 22px;
 }
 
 #doneList .fa-check {
   color: white;
-  background-color: #BC3B69;
+  background-color: green;
 }
 
 #pendingList .fa-check {
-  color: #BC3B69;
-  transition: 0.3s;
+  color: green;
 }
 #pendingList .fa-check:hover {
-  background-color: #BC3B69;
   color: white;
+  background-color: green;
 }
 
 .displayNone {

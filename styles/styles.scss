@@ -5,18 +5,18 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     .dash{
-       border: 0.5px solid $grey;
+       border: 0.5px solid #639FA6;
        width: 12%;
        margin: 20px auto;
       } 
 }
 ::placeholder {
-    color: rgba(255, 255, 255, 0.664);
+    color: rgba(213, 242, 242, 0.459);
 }
 #header {
     overflow: hidden;
     position: relative;
-    background-color: $pink;
+    background-color: $blue;
     border-radius: 0 0 10px 10px;
     padding: 15px;
     
@@ -26,7 +26,7 @@ body {
         }
         font-size: 15px;
         width: 99%;
-        background-color: #cd6185;
+        background-color: #0367A6;
         text-decoration: none;
         border: none;
         color: white;
@@ -42,18 +42,18 @@ body {
             top: 15px;
             width: 50px;
             height: 50px;
-            font-size: 15px;
-            color: $pink;
+            font-size: 18px;
+            color: $blue;
             border-radius: 25px;
             cursor: pointer;
             &:hover {
                 background-color: white;
                 color:grey;
                 transition: 0.4s;
+                transform: rotate(180deg);
             }
     }
 }
-
 div{
     p{
         margin: 30px auto;
@@ -61,11 +61,11 @@ div{
         display: block;
         text-align: center;
         font-size: 12px;
-        color: $grey ;
+        color: #639FA6 ;
     }
 }
 #pendingList, #doneList { 
-    color: #444444;
+    color: #023E73;
     padding: 0;
     margin: 0 15px 0 15px;
      .assignment {
@@ -74,15 +74,25 @@ div{
         padding: 18px 10px;
         border-radius: 5px;
         margin: 10px 0;
+        transition: 0.3s;
+        &:hover {
+            padding: 22px 14px;
+                }
         a {
             float:right;
             text-decoration: none;
             .fa-check{
-                border: 1.5px solid $pink;
+                border: 1.5px solid green;
                 border-radius:15px;
                 padding: 4px;
                 font-size: 10px;
-                margin-left: 10px; 
+                margin-left: 10px;
+                transition: 0.3s;
+                &:hover {
+                    border-radius:17px;
+                    padding: 6px;
+                    font-size: 10px;
+                        } 
                   }
             .fa-trash-alt{
                 color: $grey;
@@ -91,30 +101,28 @@ div{
                 padding-right: 10px; 
                 transition: 0.3s;
                 &:hover {
-                color: #F74320;   
+                color: #F74320;
+                font-size: 22px;
                     }
                 }
             }
          }
   }
-
 #doneList{
     .fa-check{
         color: white;
-        background-color: $pink ;
+        background-color: green;
         }
     }
 #pendingList{
     .fa-check{
-        color: $pink;
-        transition: 0.3s;
+        color: green;
         &:hover {
-            background-color: $pink;
-            color:white ;     
+            color:white ; 
+            background-color: green; 
                 }
     }
 }
-
 .displayNone{
 display: none;
 }
