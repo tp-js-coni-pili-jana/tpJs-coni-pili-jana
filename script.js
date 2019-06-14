@@ -1,3 +1,4 @@
+//todas las variables pudieron ser definidas en unasola linea
 var task
 var newTask
 var pendingList
@@ -6,6 +7,7 @@ var doneList
 
 allTask = []
 
+// hay un par bloques de esta función que pudieron ser funciones independientes
 var printTask = function() {
     event.preventDefault()
     pendingList = document.getElementById("pendingList")
